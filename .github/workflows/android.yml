@@ -49,13 +49,11 @@ jobs:
       # Allow tests to continue on other devices if they fail on one device.
       fail-fast: false
       matrix:
-        os: [ubuntu-latest]
+        os: [macos-latest]
         arch: [ x86_64 ]
         target: [ google_apis ]
         channel: [ stable ]
         api-level:
-          - 21
-          - 23
           - 26
           - 29
           - 30
@@ -83,7 +81,7 @@ jobs:
             arch: x86_64
           - os: macos-latest
             arch: x86_64
-            api-level: 34
+            api-level: 33
             target: aosp_atd
     steps:
       - uses: actions/checkout@v3
